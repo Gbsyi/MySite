@@ -1,0 +1,54 @@
+$background-primary: #111111;
+
+:host{
+    background-color: $background-primary;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 6rem;
+
+    .content{
+        height: fit-content;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 12.57%;
+        padding-right: 12.57%;
+        @media screen and (max-width:600px){
+            padding-left: 1rem;
+            padding-right: 2rem;
+        }
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.menu{
+    font-size: 1.1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+    div{
+        cursor: pointer;
+       
+    }
+
+    div + div{
+        margin-left: 1.5rem;
+    }
+
+    :hover{
+        transition: ease-in-out .1s;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+}

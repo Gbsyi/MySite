@@ -1,0 +1,25 @@
+.button{
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    padding: 1rem;
+    cursor: pointer;
+
+    :hover{
+        transition: ease-in-out .1s;
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+    
+}
+
+@media screen and (max-width:600px){    
+    .text{
+        display: none;
+    }
+}  
