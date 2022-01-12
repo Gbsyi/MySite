@@ -11,6 +11,8 @@
             <img src="assets/svgs/link.svg"/>
             Демо
         </div>
-        <img *ngIf="project.haveGithub" src="assets/svgs/github.svg" width="36px" height="36px">
+        <a [href]="project.gitHub">
+            <img *ngIf="project.haveGithub" src="assets/svgs/github.svg" width="36px" height="36px">
+        </a>
     </div>
 </div>
