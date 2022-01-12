@@ -32,7 +32,7 @@
             Мои проекты:
         </div>
         <div class="cards-wrapper">
-            <app-project-card></app-project-card>
+            <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
         </div>
     </div>
 </div>

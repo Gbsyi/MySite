@@ -13,6 +13,11 @@
 .content{
     max-width: 1000px;
     margin: 0 auto;
+
+    @media screen and(max-width:600px) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 /***********************************************************************/
@@ -32,10 +37,9 @@
     padding-top: 8rem;
     padding-right: 1rem;
     padding-left: 1rem;
-
+    padding-bottom: 2rem;
     /*Mobile*/
     @media screen and (max-width:600px){
-        padding-left: 1rem;
         padding-top: 3rem;
     }
 }
@@ -124,3 +128,13 @@
 /*                           Projects Secton                           */
 /***********************************************************************/
 
+.cards-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width:600px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+}
