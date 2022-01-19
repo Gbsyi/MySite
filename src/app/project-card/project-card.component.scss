@@ -28,10 +28,18 @@
 .tags{
     display: flex;
     flex-wrap: wrap;
-}
+    :last-child::after{
+        display: none;
+    }
+    ::after{
+        white-space: pre;
+        content: ' - ';
+    }
+    
+}/*
 .tag + .tag {
     margin-left: .5em;
-}
+}*/
 .tag{
     color: #6CACE4;
     font-weight: 300;    

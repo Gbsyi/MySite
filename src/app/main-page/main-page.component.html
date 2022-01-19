@@ -1,3 +1,4 @@
+<!--Раздел с информацией о себе-->
 <div class="top-section">
     <div class="top-wrapper content">
         <div class="hello">Привет, я</div>
@@ -5,11 +6,11 @@
         <div class="text">
             Начинающий разработчик из Новосибирска.<br>
             Владею уверенными знаниями C#. Имеется понимание основных принципов ООП, основных алгоритмов, структур данных. Есть навык разработки клиент-серверных приложений с использованием платформы ASP.NET, в настоящий момент занимаюсь написанием диплома на ней.<br>
-            Также изучаю Node.js вместе с фреймворком Express. Для фронтенда изучаю фреймворк Angular.<br>
+            Для написания простых приложений использую Node.js вместе с фреймворком Express. Для фронтенда изучаю фреймворк Angular.<br>
             Имеются навыки правильного построения реляционных баз данных. Знаком с такими СУБД, как: MS SQL Server, MySQL, PostgreSQL, MongoDB.
         </div>
 
-        <div class="links-main-section-wrapper">
+        <div id="contacts" class="links-main-section-wrapper">
             <div class="links-wrapper">
                 <app-contact-button title="GitHub">
                     <img icon src="assets/svgs/github.svg" class="button-icon">
@@ -26,6 +27,8 @@
         </div>
     </div>
 </div>
+
+<!--Раздел с навыками-->
 <div class="stack-section-wrapper">
     <div class="content">
         <div class="section-title">Мои навыки</div>
@@ -37,118 +40,52 @@
                 <th>Идеально</th>
             </thead>
             <tbody>
-                <tr class="diagram-row">
+                <div *ngIf="isLoaded; then skillsContent else loader"></div>
+                <ng-template #skillsContent>
+                <tr *ngFor="let skill of skills" class="diagram-row">
                     <td class="skill">
-                        C#
+                        {{skill.tech}}
                     </td>
                     <td class="diagram-value" colspan="3">
-                        <svg height="30" width="900"  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 30">
-                            <rect x="0" y="0" width="80%" height="30" fill="ivory"></rect>
+                        <svg height="30" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 900 30">
+                            <rect x="0" y="0" [style.width.%]="skill.level" height="30" fill="ivory"></rect>
                         </svg>
                     </td>
                 </tr>
-                <tr class="diagram-row">
-                    <td class="skill">
-                        ASP.NET
-                    </td>
-                    <td class="diagram value" colspan="3">
-                        <svg height="30" width="900"  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 30">
-                            <rect x="0" y="0" width="60%" height="30" fill="ivory"></rect>
-                        </svg>
-                    </td>
-                </tr>
-                <tr class="diagram-row">
-                    <td class="skill">
-                        WPF
-                    </td>
-                    <td class="diagram value" colspan="3">
-                        <svg height="30" width="900"  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 30">
-                            <rect x="0" y="0" width="50%" height="30" fill="ivory"></rect>
-                        </svg>
-                    </td>
-                </tr>
-                <tr class="diagram-row">
-                    <td class="skill">
-                        JavaScript
-                    </td>
-                    <td class="diagram value" colspan="3">
-                        <svg height="30" width="900"  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 30">
-                            <rect x="0" y="0" width="60%" height="30" fill="ivory"></rect>
-                        </svg>
-                    </td>
-                </tr>
-                <tr class="diagram-row">
-                    <td class="skill">
-                        Node.js
-                    </td>
-                    <td class="diagram value" colspan="3">
-                        <svg height="30" width="900"  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 30">
-                            <rect x="0" y="0" width="70%" height="30" fill="ivory"></rect>
-                        </svg>
-                    </td>
-                </tr>
-                <tr class="diagram-row">
-                    <td class="skill">
-                        Express
-                    </td>
-                    <td class="diagram value" colspan="3">
-                        <svg height="30" width="900"  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 30">
-                            <rect x="0" y="0" width="60%" height="30" fill="ivory"></rect>
-                        </svg>
-                    </td>
-                </tr>
+                </ng-template>
             </tbody>
-            <tr class="diagram-row">
-                <td class="skill">
-                    TypeScript
-                </td>
-                <td class="diagram value" colspan="3">
-                    <svg height="30" width="900"  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 30">
-                        <rect x="0" y="0" width="60%" height="30" fill="ivory"></rect>
-                    </svg>
-                </td>
-            </tr>
-            <tr class="diagram-row">
-                <td class="skill">
-                    Angular
-                </td>
-                <td class="diagram value" colspan="3">
-                    <svg height="30" width="900"  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 30">
-                        <rect x="0" y="0" width="40%" height="30" fill="ivory"></rect>
-                    </svg>
-                </td>
-            </tr>
-            <tr class="diagram-row">
-                <td class="skill">
-                    Git
-                </td>
-                <td class="diagram value" colspan="3">
-                    <svg height="30" width="900"  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 30">
-                        <rect x="0" y="0" width="100%" height="30" fill="ivory"></rect>
-                    </svg>
-                </td>
-            </tr>
-            <tr class="diagram-row">
-                <td class="skill">
-                    Docker
-                </td>
-                <td class="diagram value" colspan="3">
-                    <svg height="30" width="900"  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 30">
-                        <rect x="0" y="0" width="80%" height="30" fill="ivory"></rect>
-                    </svg>
-                </td>
-            </tr>
         </table>
     </div>
 </div>
+
+<!--Раздел с образованием-->
 <div class="divider"></div>
-<div class="projects-section-wrapper">
+<div class="content education-list">
+    <div class="section-title list-title">Образование</div>
+    <div *ngIf="isLoaded; then educationContent else loader"></div>
+    <ng-template #educationContent>
+        <div *ngIf="isLoaded" class="list">
+            <app-list *ngFor="let education of educationList" [data]="education"></app-list>
+        </div>
+    </ng-template>
+</div>
+
+<!--Раздел с проектами-->
+<div class="divider"></div>
+<div id="projects" class="projects-section-wrapper">
     <div class="content">
         <div class="section-title">
             Мои проекты:
         </div>
-        <div class="cards-wrapper">
-            <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
-        </div>
+        <div *ngIf="isLoaded; then projectsContent else loader"></div>
+        <ng-template #projectsContent>
+            <div class="cards-wrapper">
+                <app-project-card *ngFor="let project of projects" [project]="project"></app-project-card>
+            </div>
+        </ng-template>        
     </div>
 </div>
+
+<ng-template #loader>
+    <div class="loader">Загрузка...</div>
+</ng-template>

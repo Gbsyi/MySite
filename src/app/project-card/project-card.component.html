@@ -7,10 +7,12 @@
 </div>
 <div class="card-bottom">
     <div class="links">
-        <div class="demo-link">
-            <img src="assets/svgs/link.svg"/>
-            Демо
-        </div>
+        <a *ngIf="project.haveDemo" [href]="project.demoLink">
+            <div class="demo-link">
+                <img src="assets/svgs/link.svg"/>
+                Демо
+            </div>
+        </a>
         <a [href]="project.gitHub">
             <img *ngIf="project.haveGithub" src="assets/svgs/github.svg" width="36px" height="36px">
         </a>

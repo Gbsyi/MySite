@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { ResumeComponent } from './resume/resume.component';
 import { ContactButtonComponent } from './contact-button/contact-button.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
+import { ListComponent } from './list/list.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -15,9 +16,10 @@ import { ProjectCardComponent } from './project-card/project-card.component';
     AppComponent,
     HeaderComponent,
     MainPageComponent,
-    ResumeComponent,
     ContactButtonComponent,
     ProjectCardComponent,
+    ListComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

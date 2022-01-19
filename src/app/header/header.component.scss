@@ -27,6 +27,9 @@ $background-primary: #111111;
         text-decoration: none;
         color: white;
     }
+    @media print {
+        display: none;
+    }
 }
 
 .menu{

@@ -1,0 +1,13 @@
+:host{
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    color: #c6c6c6;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    
+    @media print {
+        display: none;
+    }
+}

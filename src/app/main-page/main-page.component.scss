@@ -1,6 +1,14 @@
 /***********************************************************************/
 /*                            Global styles                            */
 /***********************************************************************/
+.divider{
+    margin: 0 auto;
+    max-width: 1050px;
+    width: 100%;
+    position: relative;
+    border: 1px solid #c6c6c6;
+    opacity: 50%;
+}
 .section-title{
     font-size: 1.1em;
     font-stretch: condensed;
@@ -21,13 +29,12 @@
     }
 }
 
-.divider{
-    margin: 0 auto;
-    max-width: 1000px;
-    width: 100%;
-    position: relative;
-    border: 1px solid #c6c6c6;
-    opacity: 50%;
+.loader{
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 1rem;
+    font-stretch: condensed;
+    text-transform: uppercase;
 }
 /***********************************************************************/
 /*                              Top Secton                             */
@@ -154,6 +161,10 @@
 
 .diagram-value{
     padding: 0;
+
+    svg{
+        width: 100%;
+    }
 }
 
 thead{
@@ -189,6 +200,33 @@ thead{
     height: 64;
     font-size: 32px;
     
+}
+
+/***********************************************************************/
+/*                          Education Secton                           */
+/***********************************************************************/
+
+.education-list{
+    display: flex;
+    flex-direction: row;
+    :nth-child(n){
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width:600px){
+        flex-direction: column;
+    } 
+}
+
+.list-title{
+    margin-right: 5rem;
+}
+.list{
+    flex-grow: 1;
+    :nth-child(2n){
+        margin: 1rem;
+    }
 }
 
 /***********************************************************************/

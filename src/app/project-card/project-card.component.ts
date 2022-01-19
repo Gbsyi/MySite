@@ -6,9 +6,7 @@ import { Project } from '../models/project.model';
   styleUrls: ['./project-card.component.scss']
 })
 export class ProjectCardComponent implements OnInit {
-  @Input() project:Project = new Project("","",[],false);
-  @Input() haveGithub:boolean = false;
-  @Input() title:string = "";
+  @Input() project:Project = new Project("","",[],false,false,"","");
 
   constructor() { }
 
