@@ -42,7 +42,6 @@ $background-primary: #111111;
 
     div{
         cursor: pointer;
-       
     }
 
     div + div{
@@ -54,4 +53,7 @@ $background-primary: #111111;
         font-size: 1.1rem;
         font-weight: 500;
     }
+}
+.logo{
+    font-size: 22px;
 }
